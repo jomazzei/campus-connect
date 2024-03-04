@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awsome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="campus_logo.png" </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+    <!-- Event Form -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2 class="text-center mb-4">Create Event</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" class="form-control" id="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <select class="form-control" id="time">
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>12:00 PM</option>
+                            <option>13:00 PM</option>
+                            <option>14:00 PM</option>
+                            <option>15:00 PM</option>
+                            <option>16:00 PM</option>
+                            <option>17:00 PM</option>
+                            <option>18:00 PM</option>
+                            <option>19:00 PM</option>
+                            <option>20:00 PM</option>
+                            <option>21:00 PM</option>
+
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Organiser">Organiser</label>
+                        <input type="text" class="form-control" id="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="venue">Venue</label>
+                        <select class="form-control" id="venue">
+                            <option>Venue 1</option>
+                            <option>Venue 2</option>
+                            <option>Venue 3</option>
+                            <option>Venue 4</option>
+                            <option>Venue 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="maxPeople">Max People</label>
+                        <input type="number" class="form-control" id="maxPeople">
+                    </div>
+                    <div class="form-group">
+                        <label for="currentAttendance">Current Attendance</label>
+                        <input type="number" class="form-control" id="currentAttendance">
+                    </div>
+                    <div class="form-group">
+                        <label for="attendanceTracker">Attendance Tracker</label>
+                        <input type="number" class="form-control" id="attendanceTracker" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="Decription">Description</label>
+                        <input type="text" class="form-control" id="descrition" style="height: 300px;">
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    
+    <footer class="footer mt-auto py-4 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">© 2024 Campus Events. All rights reserved.</span><br>
+            <span class="text-muted">For inquiries, please contact us at <a
+                    href="mailto:info@campusevents.com">info@campusevents.com</a></span><br>
+            <span class="text-muted">Follow us on social media:</span><br>
+            <a href="#" class="text-muted me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-muted me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-muted me-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-muted me-3"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Get form elements
+        const maxPeopleInput = document.getElementById('maxPeople');
+        const currentAttendanceInput = document.getElementById('currentAttendance');
+        const attendanceTrackerInput = document.getElementById('attendanceTracker');
+
+        // Calculate Attendance Tracker
+        function calculateAttendanceTracker() {
+            const maxPeople = parseInt(maxPeopleInput.value);
+            const currentAttendance = parseInt(currentAttendanceInput.value);
+            const attendanceTracker = maxPeople - currentAttendance;
+            attendanceTrackerInput.value = attendanceTracker;
+        }
+
+        // Event listener for input change
+        maxPeopleInput.addEventListener('input', calculateAttendanceTracker);
+        currentAttendanceInput.addEventListener('input', calculateAttendanceTracker);
+
+        // Initial calculation on page load
+        calculateAttendanceTracker();
+    </script>
+</body>
+
+</html>
