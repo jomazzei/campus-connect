@@ -1,4 +1,4 @@
-/* Custom CSS Styles */
+
 
 /* Navigation Bar */
 .navbar-brand {
@@ -17,7 +17,7 @@
 }
 
 .navbar-brand img {
-    max-height: 50px; /* Adjust the maximum height of the logo */
+    max-height: 50px; /* maximum height of the logo */
 }
 
   
@@ -39,7 +39,7 @@
   
   /* Additional Styles */
   body {
-    padding-top: 70px; /* Adjust based on the height of your navigation bar */
+    padding-top: 70px; /* Adjust based on the height of the navigation bar */
   }
   
   @media (max-width: 576px) {
