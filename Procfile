@@ -1,1 +1,1 @@
-web: gunicorn campusconnect
+web: gunicorn campusconnect.wsgi
