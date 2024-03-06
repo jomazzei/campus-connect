@@ -26,11 +26,9 @@ class Event(models.Model):
     max_people = models.IntegerField(null=True)
     # Attendance tracker for users
     attendance_count = models.IntegerField(default=0)
-    # When was the event posted
-    created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ["-created_on", "organizer"]
+        ordering = ["event_host_date", "organizer"]
 
     # Returns title of post in admin panel instead of "Object(n)"
     def __str__(self):
