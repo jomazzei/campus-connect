@@ -11,9 +11,10 @@
 <body>
     <h1>Event list</h1>
     {% for event in object_list %}
-    <h2>{{event.title}}</h2>
-    <p>{{event.content}}</p>
-    <p>Organizer: {{event.organizer}}</p>
+        <h2>{{event.title}}</h2>
+        <p>{{event.event_host_date}}</p>
+        <p>{{event.content}}</p>
+        <p>Organizer: {{event.organizer}}</p>
     {% endfor %}
 </body>
 
