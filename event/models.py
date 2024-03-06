@@ -8,7 +8,7 @@ class Event(models.Model):
     # Name of the event
     title = models.CharField(max_length=200, unique=True)
     # URL field
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=250, unique=True)
     # The date the event is held
     event_host_date = models.DateTimeField()
     # Time of event
@@ -21,7 +21,7 @@ class Event(models.Model):
     # Cloudinary image field
     featured_image = CloudinaryField('image', default='placeholder')
     # Main content
-    content = models.TextField()
+    content = models.TextField(null=False)
     # Max people event can hold
     max_people = models.IntegerField(null=True)
     # Attendance tracker for users

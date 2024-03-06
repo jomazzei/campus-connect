@@ -23,8 +23,6 @@
                     {{ event_form.event_host_date }}
                 </div>
 
-                <!-- Can't get the drop down to work currently with django, I commented out the HTML and left it
-                as a reference to come back to, so we can see what it *should* do, unf -->
                 <div class="form-group">
                     <label for="time">Time</label>
                     <select class="form-control" id="time" name="event_time">
@@ -56,6 +54,11 @@
                 <div class="form-group">
                     <label for="{{ event_form.content.id_for_label }}">Description</label>
                     {% render_field event_form.content placeholder="Tell people a few things about your event!" class="form-control" %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ event_form.content.id_for_label }}">Upload an image</label>
+                    {% render_field event_form.featured_image class="form-control" %}
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>

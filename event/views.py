@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.views import generic
 from .models import Event
@@ -21,11 +22,13 @@ def create_event(request):
     if request.method == "POST":
         event_form = CreateEventForm(request.POST)
         if event_form.is_valid():
-            event_form.save(commit=False)
-            event_form.event_host_time = request.POST.get("event_time")
-            event_form.save()
+            print("SUCCESS")
+            event = event_form.save(commit=False)
+            event.organizer = request.user
+            event.event_host_time = request.POST.get("event_time")
+            event.save()
             messages.add_message(request, messages.SUCCESS, "You have created an event")
-            return HttpResponseRedirect(request.path_info)
     else:
         event_form = CreateEventForm()
+    # Needs another instance of form creation so it clears form on refresh/redirect
     return render(request, "event/form_create_event.html", {"event_form":event_form})
