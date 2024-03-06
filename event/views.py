@@ -28,7 +28,11 @@ def create_event(request):
             event.event_host_time = request.POST.get("event_time")
             event.save()
             messages.add_message(request, messages.SUCCESS, "You have created an event")
+            return HttpResponseRedirect("success/")        
     else:
         event_form = CreateEventForm()
     # Needs another instance of form creation so it clears form on refresh/redirect
     return render(request, "event/form_create_event.html", {"event_form":event_form})
+
+def create_success(request):
+    return render(request, "event/form_create_success.html")
