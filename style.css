@@ -48,3 +48,18 @@
     }
   }
   
+/* Event List */
+
+.card-img-top {
+  height: 200px; /* Set the height of event photos */
+  object-fit: cover;
+}
+
+.card-body {
+  height: 200px; /* Set the height of event description */
+  overflow: hidden;
+}
+
+.btn-primary {
+  margin-top: auto; /* Push the read more button to the bottom of the card */
+}
