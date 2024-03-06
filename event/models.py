@@ -11,6 +11,8 @@ class Event(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     # The date the event is held
     event_host_date = models.DateTimeField()
+    # Time of event
+    event_host_time = models.TimeField()
     # Where the event is held
     venue = models.CharField(max_length=200)
     # Organizer is the user account that created event post

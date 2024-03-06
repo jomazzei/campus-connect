@@ -1,102 +1,97 @@
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
+{% load widget_tweaks %}
 
-    <!-- Event Form -->
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <h2 class="text-center mb-4">Create Event</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="title">Title</label>
-                        <input type="text" class="form-control" id="title">
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Date</label>
-                        <input type="date" class="form-control" id="date">
-                    </div>
-                    <div class="form-group">
-                        <label for="time">Time</label>
-                        <select class="form-control" id="time">
-                            <option>10:00 AM</option>
-                            <option>11:00 AM</option>
-                            <option>12:00 PM</option>
-                            <option>13:00 PM</option>
-                            <option>14:00 PM</option>
-                            <option>15:00 PM</option>
-                            <option>16:00 PM</option>
-                            <option>17:00 PM</option>
-                            <option>18:00 PM</option>
-                            <option>19:00 PM</option>
-                            <option>20:00 PM</option>
-                            <option>21:00 PM</option>
+<!-- Event Form -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="text-center mb-4">Create Event</h2>
 
-                        </select>
-                    </div>
+            {% if user.is_authenticated %}
+            <form method="post">
+                {% csrf_token %}
 
-                    <div class="form-group">
-                        <label for="Organiser">Organiser</label>
-                        <input type="text" class="form-control" id="date">
-                    </div>
-                    <div class="form-group">
-                        <label for="venue">Venue</label>
-                        <select class="form-control" id="venue">
-                            <option>Venue 1</option>
-                            <option>Venue 2</option>
-                            <option>Venue 3</option>
-                            <option>Venue 4</option>
-                            <option>Venue 5</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="maxPeople">Max People</label>
-                        <input type="number" class="form-control" id="maxPeople">
-                    </div>
-                    <div class="form-group">
-                        <label for="currentAttendance">Current Attendance</label>
-                        <input type="number" class="form-control" id="currentAttendance">
-                    </div>
-                    <div class="form-group">
-                        <label for="attendanceTracker">Attendance Tracker</label>
-                        <input type="number" class="form-control" id="attendanceTracker" readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="Decription">Description</label>
-                        <input type="text" class="form-control" id="descrition" style="height: 300px;">
-                    </div>
+                <div class="form-group">
+                    <label for="{{ event_form.title.id_for_label }}">Title</label>
+                    {% render_field event_form.title placeholder="Event title" class="form-control" %}
+                </div>
 
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    {{ event_form.event_host_date }}
+                </div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
+                <!-- Can't get the drop down to work currently with django, I commented out the HTML and left it
+                as a reference to come back to, so we can see what it *should* do, unf -->
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <select class="form-control" id="time" name="event_time">
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>13:00 PM</option>
+                        <option>14:00 PM</option>
+                        <option>15:00 PM</option>
+                        <option>16:00 PM</option>
+                        <option>17:00 PM</option>
+                        <option>18:00 PM</option>
+                        <option>19:00 PM</option>
+                        <option>20:00 PM</option>
+                        <option>21:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ event_form.venue.id_for_label }}">Venue</label>
+                    {% render_field event_form.venue placeholder="Where will you hold this event?" class="form-control" %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ event_form.max_people.id_for_label }}">Max People</label>
+                    {% render_field event_form.max_people placeholder="How many people can attend" class="form-control" %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ event_form.content.id_for_label }}">Description</label>
+                    {% render_field event_form.content placeholder="Tell people a few things about your event!" class="form-control" %}
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                {% else %}
+                <p>Please log in to post your event</p>
+            </form>
+            {% endif %}
         </div>
     </div>
+</div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- JavaScript -->
-    <script>
-        // Get form elements
-        const maxPeopleInput = document.getElementById('maxPeople');
-        const currentAttendanceInput = document.getElementById('currentAttendance');
-        const attendanceTrackerInput = document.getElementById('attendanceTracker');
+<!-- JavaScript -->
+<script>
+    // // Get form elements
+    // const maxPeopleInput = document.getElementById('maxPeople');
+    // const currentAttendanceInput = document.getElementById('currentAttendance');
+    // const attendanceTrackerInput = document.getElementById('attendanceTracker');
 
-        // Calculate Attendance Tracker
-        function calculateAttendanceTracker() {
-            const maxPeople = parseInt(maxPeopleInput.value);
-            const currentAttendance = parseInt(currentAttendanceInput.value);
-            const attendanceTracker = maxPeople - currentAttendance;
-            attendanceTrackerInput.value = attendanceTracker;
-        }
+    // // Calculate Attendance Tracker
+    // function calculateAttendanceTracker() {
+    //     const maxPeople = parseInt(maxPeopleInput.value);
+    //     const currentAttendance = parseInt(currentAttendanceInput.value);
+    //     const attendanceTracker = maxPeople - currentAttendance;
+    //     attendanceTrackerInput.value = attendanceTracker;
+    // }
 
-        // Event listener for input change
-        maxPeopleInput.addEventListener('input', calculateAttendanceTracker);
-        currentAttendanceInput.addEventListener('input', calculateAttendanceTracker);
+    // // Event listener for input change
+    // maxPeopleInput.addEventListener('input', calculateAttendanceTracker);
+    // currentAttendanceInput.addEventListener('input', calculateAttendanceTracker);
 
-        // Initial calculation on page load
-        calculateAttendanceTracker();
-    </script>
+    // // Initial calculation on page load
+    // calculateAttendanceTracker(); -->
+</script>
 {% endblock %}
