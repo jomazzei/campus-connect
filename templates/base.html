@@ -1,5 +1,9 @@
 {% load static %}
 
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,9 +38,21 @@
                     <a class="nav-link" href="{% url 'about-page' %}">About</a>
                 </li>
 
+                {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                        href="{% url 'account_logout' %}">Logout</a>
                 </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                        href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                        href="{% url 'account_login' %}">Login</a>
+                </li>
+                {% endif %}
             </ul>
         </div>
     </nav>
@@ -56,9 +72,9 @@
     </div>
 
     <main>
-    {% block content %}
-    <!-- Specific page content -->
-    {% endblock %}
+        {% block content %}
+        <!-- Specific page content -->
+        {% endblock %}
     </main>
 
 
