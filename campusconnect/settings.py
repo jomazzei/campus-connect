@@ -61,6 +61,8 @@ INSTALLED_APPS = [
     'django_summernote',
     'django_bleach',
     'event',
+    'register',
+    
 ]
 
 # Numeric handler ID for our ESQL database
