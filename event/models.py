@@ -50,6 +50,9 @@ class Event(models.Model):
     max_people = models.IntegerField(null=True)
     # Attendance tracker for users
     attendance_count = models.IntegerField(default=0)
+    # Who is attending
+    attendance_list = models.TextField(blank=True)
+
 
     class Meta:
         ordering = ["event_host_date", "organizer"]
