@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic
 from .models import Event
 from django.contrib import messages
@@ -51,23 +51,30 @@ def event_detail(request, slug):
 def create_event(request):
     event_form = CreateEventForm()
 
+    
+
     if request.method == "POST":
+        print("This is the poas r: ",request.POST)
         event_form = CreateEventForm(request.POST)
+
+        # Just checks on POST request what the selected fields are in event_time
+        # event_time_str = request.POST.get("event_time")
+        # print("Value: ", event_time_str)
+        # print("Type: ", type(event_time_str))
+
+        # event_time = datetime.strptime(event_time_str, '%H:%M:%S').time()
+        # print("Value ", event_time)
+        # print("Type: ", type(event_time))
 
         if event_form.is_valid():
             event = event_form.save(commit=False)
             event.organizer = request.user
-
-            # Get the event_time from the form
-            event_time_str = request.POST.get("event_time")
-            # Correctly parse the string to a time object
-            # Note: Adjust the '%H:%M:%S' format string if your input format differs
             try:
-                event_time = datetime.strptime(event_time_str, '%H:%M:%S').time()
-                event.event_host_time = event_time
                 event.save()
+                print("Successful submission")
                 messages.success(request, "You have created an event")
                 return redirect("success/")
+                
             except ValueError:
                 messages.error(request, "Invalid time format. Please use HH:MM:SS format.")
 
