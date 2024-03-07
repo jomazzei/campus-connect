@@ -4,6 +4,8 @@ from django.views import generic
 from .models import Event
 from django.contrib import messages
 from .forms import CreateEventForm
+from datetime import datetime
+
 
 
 # Create your views here.
@@ -38,20 +40,32 @@ def event_detail(request):
 
 # View to handle the Create Event page
 def create_event(request):
+    event_form = CreateEventForm()
+    time_hour = Event.TIME_CHOICES_12H
+    time_ampm = Event.TIME_AMPM
+    
+    # I've tried strptime, I've splitting the inputs in 2 different ways, 1 as model CHOICES, 1 as creating 2 string
+    # inputs in the form, getting them with request.POST.get() and combining them then formatting with strptime. 
+    # Nothing has worked.
+    # Constant error "this field is required" no matter the format of the input
+    
     if request.method == "POST":
         event_form = CreateEventForm(request.POST)
+
         if event_form.is_valid():
-            print("SUCCESS")
             event = event_form.save(commit=False)
             event.organizer = request.user
-            event.event_host_time = request.POST.get("event_time")
+
             event.save()
             messages.add_message(request, messages.SUCCESS, "You have created an event")
-            return HttpResponseRedirect("success/")        
-    else:
-        event_form = CreateEventForm()
+            return HttpResponseRedirect("success/")
 
-    return render(request, "event/form_create_event.html", {"event_form":event_form})
+        # Runs if form is invalid
+        else:
+            print("Form fail", event_form.errors)
+            messages.add_message(request, messages.ERROR, "Your form was invalid")
+
+    return render(request, "event/form_create_event.html", {"event_form":event_form, "time_hour":time_hour, "time_ampm":time_ampm})
 
 
 # The page that the user is redirected to on valid form submission

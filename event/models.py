@@ -5,6 +5,26 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Event(models.Model):
+    TIME_CHOICES_12H = [
+    (1, "1:00"),
+    (2, "2:00"),
+    (3, "3:00"),
+    (4, "4:00"),
+    (5, "5:00"),
+    (6, "6:00"),
+    (7, "7:00"),
+    (8, "8:00"),
+    (9, "9:00"),
+    (10, "10:00"),
+    (11, "11:00"),
+    (12, "12:00")
+    ]
+
+    TIME_AMPM = [
+    ("AM", "AM"),
+    ("PM", "PM")
+    ]
+
     # Name of the event
     title = models.CharField(max_length=200, unique=True)
     # URL field
@@ -12,7 +32,8 @@ class Event(models.Model):
     # The date the event is held
     event_host_date = models.DateTimeField()
     # Time of event
-    event_host_time = models.TimeField()
+    event_host_time = models.IntegerField(choices=TIME_CHOICES_12H, default=1)
+    event_host_time_AMPM = models.CharField(max_length=2, choices=TIME_AMPM, default="AM")
     # Where the event is held
     venue = models.CharField(max_length=200)
     # Organizer is the user account that created event post
