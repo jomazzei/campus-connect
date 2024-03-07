@@ -31,9 +31,17 @@ class EventList(generic.ListView):
 
 
 # View for individual event pages
-def event_detail(request):
+def event_detail(request, slug):
     queryset = Event.objects
     event = get_object_or_404(queryset, slug=slug)
+
+    return render(
+        request,
+        "event/event_detail.html",
+        {
+            "event": event,
+        }
+    )
 
 
 # View to handle the Create Event page

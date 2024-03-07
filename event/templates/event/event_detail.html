@@ -1,8 +1,35 @@
 {% extends "base.html" %}
-
-{% block content %}
 {% load static %}
+{% block content %}
+
 
 <!-- Fill the space with data from Event models based on saved user input -->
-
+<div class="text-center">
+    <div>
+        <div>
+            <div>
+                <p class="author">Organizer: {{ event.organizer }}</p>
+            </div>
+                <h2 >{{ event.title }}</h2>
+                <p>
+                    {{ event.content | safe}}
+                </p>
+            <hr>
+            <p>
+               {{ event.attendance_count }} / {{ event.max_people }} are currently attending
+            </p>
+            <p>
+                Date of Event: {{ event.event_host_date }}
+            </p>
+            <hr/>
+            <button>
+                {% if user.is_authenticated %}
+                I am attending
+                {% else %}
+                You need to login before you can attend this event
+                {% endif %}
+            </button>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -14,7 +14,7 @@
             <a href="{% url 'event_detail' event.slug %}">
                 <h2 >{{ event.title }}</h2>
                 <p>
-                    {{ event.content }}
+                    {{ event.content | safe}}
                 </p>
             </a>
             <hr>
