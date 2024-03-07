@@ -28,8 +28,9 @@ def AboutPage(request):
 
 # List view for all Event items
 class EventList(generic.ListView):
-    queryset = Event.objects.all()
+    queryset = Event.objects.all().order_by("event_host_date")
     template_name = "event_list.html"
+    paginate_by = 6
 
 
 # View for individual event pages
