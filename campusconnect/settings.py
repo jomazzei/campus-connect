@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
 import dj_database_url
+import sys
 
 if os.path.isfile("env.py"):
     import env
@@ -58,6 +59,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     "widget_tweaks",
     'django_summernote',
+    'django_bleach',
     'event',
 ]
 
@@ -69,6 +71,8 @@ LOGOUT_REDIRECT_URL = '/'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+BLEACH_ALLOWED_TAGS = []
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

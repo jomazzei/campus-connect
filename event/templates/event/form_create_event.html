@@ -38,12 +38,12 @@
 
                 <div class="form-group">
                     <!-- SPLIT MODEL INPUTS INTO 2 DIFFERENT ENTRIES: HOURS & AMPM -->
-                    <label for="hour">Hour:</label>
+                    <!-- <label for="hour">Hour:</label>
                     <select name="time_hour" id="hour" class="form-control">
                         {% for choice in time_hour %}
                         <option value="{{ choice.0 }}">{{ choice.1 }}</option>
                         {% endfor %}
-                    </select>
+                    </select> -->
 
                         <!-- SPLIT AND THEN CONCATENATE HOUR AND AMPM STRINGS -->
                     <!-- <input type="text" id="time" class="form-control" name="event_time">
@@ -53,7 +53,8 @@
                         <option value="PM">PM</option> -->
 
                             <!-- ORIGINAL FORM DESIGN -->
-                    <!-- <select class="form-control" id="time" name="event_time">
+                            <label for="time" name="event_time">Time:</label>
+                    <select class="form-control" id="time" name="event_time">
                         <option value="10:00:00">10:00 AM</option>
                         <option value="11:00:00">11:00 AM</option>
                         <option value="12:00:00">12:00 PM</option>
@@ -66,18 +67,18 @@
                         <option value="19:00:00">19:00 PM</option>
                         <option value="20:00:00">20:00 PM</option>
                         <option value="21:00:00">21:00 PM</option>
-                    </select> -->
+                    </select>
                 </div>
 
                 <!-- SPLIT MODEL INPUTS INTO 2 DIFFERENT ENTRIES: HOURS & AMPM -->
-                <div>
+                <!-- <div>
                     <label for="ampm">AM/PM:</label>
                     <select id="ampm" name="ampm" class="form-control">
                         {% for choice in time_ampm %}
                         <option value="{{ choice.0 }}">{{ choice.1 }}</option>
                         {% endfor %}
                     </select>
-                </div>
+                </div> -->
 
                 <div class="form-group">
                     <label for="{{ event_form.venue.id_for_label }}">Venue</label>
