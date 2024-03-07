@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
 import dj_database_url
+import sys
 
 if os.path.isfile("env.py"):
     import env
