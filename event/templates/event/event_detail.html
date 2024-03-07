@@ -22,13 +22,11 @@
                 Date of Event: {{ event.event_host_date }}
             </p>
             <hr/>
-            <button>
-                {% if user.is_authenticated %}
-                I am attending
-                {% else %}
-                You need to login before you can attend this event
-                {% endif %}
-            </button>
+            {% if user.is_authenticated %}
+            <a class="btn" href="{% url 'attend_event' event.slug %}">
+                I am attending               
+            </a>
+            {% endif %}
         </div>
     </div>
 </div>
