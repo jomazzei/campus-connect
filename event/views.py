@@ -6,6 +6,8 @@ from django.contrib import messages
 from .forms import CreateEventForm
 from datetime import datetime
 
+from django.views.generic.edit import CreateView
+
 
 # Sets Home page
 def home_page(request):
@@ -25,6 +27,7 @@ def AboutPage(request):
 
 # List view for all Event items
 class EventList(generic.ListView):
+    model = Event
     queryset = Event.objects.all()
     template_name = "event_list.html"
     paginate_by = 6
@@ -39,7 +42,7 @@ def event_detail(request, slug):
         request,
         "event/event_detail.html",
         {
-            "event": event,
+            "event": event
         }
     )
 
