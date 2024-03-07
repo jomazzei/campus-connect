@@ -1,6 +1,6 @@
 <h1 align="center">Hackathon 3 - Campus Connect</h1>
 
-[View live project here](https://django-campus-connect-651e95e66b0e.herokuapp.com/)
+[View live deployment here!](https://django-campus-connect-651e95e66b0e.herokuapp.com/)
 
 Campus Connect is a project being built with the goal to connect students with eachother through events.
 Be it workshops, study groups, performances or businesses wanting to inspire our young adults, you can schedule your event with us and put the word out.
@@ -68,6 +68,8 @@ Connect with more people, grow your social circle or your network and set yourse
 <br>
 
 ## Credits
+- ![CampusConnect logo](/DocumentationAssets/campus_logo.png) sourced from copyright holder [ICICI Bank](https://www.icicicareers.com/campusconnect/Home.aspx)
+- 
 
 ### Content
 - 
