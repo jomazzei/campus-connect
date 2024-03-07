@@ -51,8 +51,6 @@ def event_detail(request, slug):
 def create_event(request):
     event_form = CreateEventForm()
 
-    
-
     if request.method == "POST":
         print("This is the poas r: ",request.POST)
         event_form = CreateEventForm(request.POST)
@@ -77,6 +75,7 @@ def create_event(request):
 # The page that the user is redirected to on valid form submission
 def create_success(request):
     return render(request, "event/form_create_success.html")
+
 
 def attend_event(request, slug):
     event = Event.objects.get(slug=slug)
