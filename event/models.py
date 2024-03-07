@@ -30,10 +30,12 @@ class Event(models.Model):
     # URL field
     slug = models.SlugField(max_length=250, unique=True)
     # The date the event is held
-    event_host_date = models.DateTimeField()
+    event_host_date = models.DateField()
     # Time of event
-    event_host_time = models.IntegerField(choices=TIME_CHOICES_12H, default=1)
-    event_host_time_AMPM = models.CharField(max_length=2, choices=TIME_AMPM, default="AM")
+    event_host_time = models.TimeField()
+    # event_host_time = models.IntegerField(choices=TIME_CHOICES_12H, default=1)
+    # event_host_time_AMPM = models.CharField(max_length=2, choices=TIME_AMPM, default="AM")
+    
     # Where the event is held
     venue = models.CharField(max_length=200)
     # Organizer is the user account that created event post
