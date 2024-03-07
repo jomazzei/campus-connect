@@ -83,6 +83,7 @@ def create_success(request):
 
 def attend_event(request, slug):
     event = Event.objects.get(slug=slug)
-    event.attendance_count = event.attendance_count + 1
-    event.save()
+    if event.attendance_count < event.max_people:
+        event.attendance_count = event.attendance_count + 1
+        event.save()
     return HttpResponseRedirect(reverse('event_detail', args=[slug]))
