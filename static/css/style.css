@@ -1,0 +1,69 @@
+
+
+/* Navigation Bar */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-height: 50px; /* maximum height of the logo */
+}
+
+  
+  /* Event Form */
+  .container {
+    max-width: 800px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    font-size: 14px;
+  }
+  
+  /* Additional Styles */
+  body {
+    padding-top: 70px; /* Adjust based on the height of the navigation bar */
+  }
+  
+  @media (max-width: 576px) {
+    body {
+      padding-top: 56px; /* Adjust for smaller screens */
+    }
+  }
+  
+/* Event List */
+
+.card-img-top {
+  height: 200px; /* Set the height of event photos */
+  object-fit: cover;
+}
+
+.card-body {
+  height: 200px; /* Set the height of event description */
+  overflow: hidden;
+}
+
+.btn-primary {
+  margin-top: auto; /* Push the read more button to the bottom of the card */
+}
+
+.more-info {
+  display: none;
+}

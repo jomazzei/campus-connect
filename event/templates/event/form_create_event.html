@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+{% load widget_tweaks %}
+
+<!-- Event Form -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="text-center mb-4">Create Event</h2>
+
+            {% if user.is_authenticated %}
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="{{ event_form.title.id_for_label }}">Title</label>
+                    {% render_field event_form.title placeholder="Event title" class="form-control" %}
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    {{ event_form.event_host_date }}
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <select class="form-control" id="time" name="event_time">
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>13:00 PM</option>
+                        <option>14:00 PM</option>
+                        <option>15:00 PM</option>
+                        <option>16:00 PM</option>
+                        <option>17:00 PM</option>
+                        <option>18:00 PM</option>
+                        <option>19:00 PM</option>
+                        <option>20:00 PM</option>
+                        <option>21:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ event_form.venue.id_for_label }}">Venue</label>
+                    {% render_field event_form.venue placeholder="Where will you hold this event?" class="form-control" %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ event_form.max_people.id_for_label }}">Max People</label>
+                    {% render_field event_form.max_people placeholder="How many people can attend" class="form-control" %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ event_form.content.id_for_label }}">Description</label>
+                    {% render_field event_form.content placeholder="Tell people a few things about your event!" class="form-control" %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ event_form.content.id_for_label }}">Upload an image</label>
+                    {% render_field event_form.featured_image class="form-control" %}
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                {% else %}
+                <p>Please log in to post your event</p>
+            </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript -->
+<script>
+    // // Get form elements
+    // const maxPeopleInput = document.getElementById('maxPeople');
+    // const currentAttendanceInput = document.getElementById('currentAttendance');
+    // const attendanceTrackerInput = document.getElementById('attendanceTracker');
+
+    // // Calculate Attendance Tracker
+    // function calculateAttendanceTracker() {
+    //     const maxPeople = parseInt(maxPeopleInput.value);
+    //     const currentAttendance = parseInt(currentAttendanceInput.value);
+    //     const attendanceTracker = maxPeople - currentAttendance;
+    //     attendanceTrackerInput.value = attendanceTracker;
+    // }
+
+    // // Event listener for input change
+    // maxPeopleInput.addEventListener('input', calculateAttendanceTracker);
+    // currentAttendanceInput.addEventListener('input', calculateAttendanceTracker);
+
+    // // Initial calculation on page load
+    // calculateAttendanceTracker(); -->
+</script>
+{% endblock %}
