@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from .models import Event
 from django.contrib import messages
@@ -79,3 +79,9 @@ def create_event(request):
 # The page that the user is redirected to on valid form submission
 def create_success(request):
     return render(request, "event/form_create_success.html")
+
+def attend_event(request, slug):
+    event = Event.objects.get(slug=slug)
+    event.attendance_count = event.attendance_count + 1
+    event.save()
+    return HttpResponseRedirect(reverse('event_detail', args=[slug]))
