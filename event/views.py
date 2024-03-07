@@ -56,26 +56,16 @@ def create_event(request):
         print("This is the poas r: ",request.POST)
         event_form = CreateEventForm(request.POST)
 
-        # Just checks on POST request what the selected fields are in event_time
-        # event_time_str = request.POST.get("event_time")
-        # print("Value: ", event_time_str)
-        # print("Type: ", type(event_time_str))
-
-        # event_time = datetime.strptime(event_time_str, '%H:%M:%S').time()
-        # print("Value ", event_time)
-        # print("Type: ", type(event_time))
-
         if event_form.is_valid():
             event = event_form.save(commit=False)
             event.organizer = request.user
             try:
                 event.save()
-                print("Successful submission")
                 messages.success(request, "You have created an event")
                 return redirect("success/")
                 
             except ValueError:
-                messages.error(request, "Invalid time format. Please use HH:MM:SS format.")
+                messages.error(request, "Invalid time format. Please use Hour:Minute:Second format. f.e. 10:00:00")
 
     else:
         event_form = CreateEventForm()
