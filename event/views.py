@@ -7,7 +7,6 @@ from .forms import CreateEventForm
 from datetime import datetime
 
 
-# Create your views here.
 # Sets Home page
 def home_page(request):
     return render(
