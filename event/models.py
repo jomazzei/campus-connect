@@ -8,7 +8,7 @@ from django.utils.text import slugify
 class Event(models.Model):
 
     # Name of the event
-    title = models.CharField(max_length=200, unique=True)
+    title = models.CharField(max_length=200, unique=True, blank=False)
     # URL field
     slug = models.SlugField(max_length=250, unique=True, blank=True)
     # The date the event is held
@@ -30,7 +30,6 @@ class Event(models.Model):
     attendance_count = models.IntegerField(default=0)
     # Who is attending
     attendance_list = models.TextField(blank=True)
-
 
     class Meta:
         ordering = ["event_host_date", "organizer"]

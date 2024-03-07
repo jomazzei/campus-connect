@@ -7,9 +7,7 @@ from .forms import CreateEventForm
 from datetime import datetime
 
 
-
 # Create your views here.
-
 # Sets Home page
 def home_page(request):
     return render(
@@ -28,14 +26,14 @@ def AboutPage(request):
 
 # List view for all Event items
 class EventList(generic.ListView):
-    queryset = Event.objects.all().order_by("event_host_date")
+    queryset = Event.objects.all()
     template_name = "event_list.html"
     paginate_by = 6
 
 
 # View for individual event pages
 def event_detail(request, slug):
-    queryset = Event.objects
+    queryset = Event.objects.all()
     event = get_object_or_404(queryset, slug=slug)
 
     return render(
@@ -49,10 +47,8 @@ def event_detail(request, slug):
 
 # View to handle the Create Event page
 def create_event(request):
-    event_form = CreateEventForm()
 
     if request.method == "POST":
-        print("This is the poas r: ",request.POST)
         event_form = CreateEventForm(request.POST)
 
         if event_form.is_valid():
@@ -77,6 +73,7 @@ def create_success(request):
     return render(request, "event/form_create_success.html")
 
 
+# Attend Event view
 def attend_event(request, slug):
     event = Event.objects.get(slug=slug)
     # check if the event is still available
