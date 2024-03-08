@@ -26,6 +26,12 @@
             </div>
         </div>
 
+        <!-- This sets a new row if content count can be divided by 3 -->
+        {% if forloop.counter|divisibleby:3 %}
+    </div> <!-- If divisible, this end div tag breaks off the row early and sets a new row -->
+    <div class="row">
+        {% endif %}
+
         {% endfor %}
 
     </div> <!-- end of row div -->

@@ -30,7 +30,7 @@ class EventList(generic.ListView):
     model = Event
     queryset = Event.objects.all()
     template_name = "event_list.html"
-    paginate_by = 6
+    paginate_by = 9
 
 
 # View for individual event pages
