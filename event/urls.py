@@ -11,4 +11,5 @@ urlpatterns = [
 
     path("<slug:slug>/", views.event_detail, name="event_detail"),
     path("<slug:slug>/attend", views.attend_event, name="attend_event"),
+    path("<slug:slug>/delete", views.delete_event, name="delete_event"),
 ]
