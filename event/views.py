@@ -86,3 +86,9 @@ def attend_event(request, slug):
             event.attendance_list = str(event.attendance_list) + " " + str(request.user)
             event.save()
     return HttpResponseRedirect(reverse('event_detail', args=[slug]))
+
+def delete_event(request, slug):
+    event = Event.objects.get(slug=slug)
+    if request.user == event.organizer:
+        event.delete()
+    return HttpResponseRedirect(reverse('event-list'))
