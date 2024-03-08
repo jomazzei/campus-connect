@@ -78,9 +78,21 @@ For a full overview of our user stories and features, look at our [project board
 
 ### Validator Testing
 - __HTML__
-    - [The W3C Markup Validator](https://validator.w3.org/#validate_by_input)
+  - [The W3C Markup Validator](https://validator.w3.org/#validate_by_input)
 - __CSS__
-    - [The W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+  - [The W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+### Performance & Contrast Tests
+-__Lighthouse__
+  - placeholder
+-__WCAG Color contrast__
+  - placeholder
+
+### Debugging & Test Module
+-__User Event Form__
+  - placeholder
+  - screenshot of name= tag
+  - full known bug list on project board
 
 <br>
 
@@ -126,9 +138,11 @@ For a full overview of our user stories and features, look at our [project board
 ![Placeholder event3](/DocumentationAssets/social-mixer-777x437.jpg)
 - Placeholder event image sourced from copyright holder [University of Oxford](https://www.ox.ac.uk/news/arts-blog/power-prediction-language-comprehension)
 
-#### Disclaimer
-  <p>Image sources are the presumed copyright holders by searching through exact matches and looking at a combination of result dates, if available, and page source dates, if available.</p>
-  <p></p>Images originally found on Google Images</p>
+<br>
+
+##### _Disclaimer_
+  _<p>Image sources are the presumed copyright holders by searching through exact matches and looking at a combination of result dates, if available, and page source dates, if available.</p>_
+  _<p>Images originally found on Google Images</p>_
 
 <br>
 
