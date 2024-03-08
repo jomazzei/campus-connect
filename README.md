@@ -81,14 +81,16 @@ Our core stories and features revolved around what the main purpose of the websi
 
 
 ## Credits
-- ![CampusConnect logo](/DocumentationAssets/campus_logo.png) sourced from copyright holder [ICICI Bank](https://www.icicicareers.com/campusconnect/Home.aspx)
-- Template for ReadMe created from the [Belgian Bakes](https://github.com/Tariq-845/belgian-bakes) ReadMe file, originally made by [Tariq](https://github.com/Tariq-845)
+
+<hr>
+
+### Images
+![CampusConnect logo](/DocumentationAssets/campus_logo.png)
+- Campus Connect logo sourced from copyright holder [ICICI Bank](https://www.icicicareers.com/campusconnect/Home.aspx)
+
 
 ### Content
-- 
-
-### Media 
-- 
+- Template for ReadMe created from the [Belgian Bakes](https://github.com/Tariq-845/belgian-bakes) ReadMe file, originally made by [Tariq](https://github.com/Tariq-845)
 
 ### Collaborators 
 - [Daniel Favell](https://github.com/DanielFavell)
