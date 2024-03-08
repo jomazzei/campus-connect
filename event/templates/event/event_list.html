@@ -2,73 +2,39 @@
 {% load static %}
 {% load bleach_tags %}
 
-<!-- Block content cuts out the HTML up until endblock content and 
-    pastes it in the middle of the base.html -->
 {% block content %}
-
 
 <div class="container-fluid">
     <div class="row">
 
-        <!-- This is a for loop that iterates through and lists all the 
-    events in the event_list.
-    For every individual event, it will display the following HTML tags and content/
-    The content is fetched using dot notation to find individual elements of Event class -->
         {% for event in event_list %}
 
         <div class="col-md-4">
-
             <div class="card mb-4">
-
                 <div class="card-body">
-
                     <div>
                         <p class="author">Organizer: {{ event.organizer }}</p>
-
                     </div>
-                    <!-- This just grabs the associated URL for that post, defined in the "slug" portion of the admin panel -->
                     <a href="{% url 'event_detail' event.slug %}">
-
                         <h2>{{ event.title }}</h2>
-
-                        <!-- I would probably remove the content section and instead
-                go for a sleek design showing the title, event date and time.
-                You can absolutely go for the content as well but it'll require some extra 
-                hassle with JS to create a cut-off point when there's too much text.
-                Depends how you're feeling about it -->
-                        <p>
-                            {{ event.content }}
-                        </p>
-
                     </a>
-
                     <hr>
-
-                    <p>
-                        Date of Event: {{ event.event_host_date }}
-                    </p>
-
-                    <p>
-                        Time of Event: {{ event.event_host_time }}
-                    </p>
-
+                    <p>Date of Event: {{ event.event_host_date }}</p>
+                    <p>Time of Event: {{ event.event_host_time }}</p>
                     <hr>
-
                 </div>
-
             </div>
-
         </div>
+
         <!-- This sets a new row if content count can be divided by 3 -->
         {% if forloop.counter|divisibleby:3 %}
     </div>
     <div class="row">
         {% endif %}
         {% endfor %}
-
     </div> <!-- end of row div -->
 
-    <!-- Sets pagination of website -->
+    <!-- Pagination -->
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">

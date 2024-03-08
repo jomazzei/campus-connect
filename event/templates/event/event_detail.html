@@ -23,11 +23,43 @@
             </p>
             <hr/>
             {% if user.is_authenticated %}
-            <a class="btn" href="{% url 'attend_event' event.slug %}">
-                I am attending               
+            <a class="btn btn-primary" href="{% url 'attend_event' event.slug %}">
+                I am attending this event
             </a>
+            {% endif %}
+            {% if user == event.organizer %}
+            <button class="btn btn-outline-danger" id="delete-button">
+                Delete this event.
+            </button>
             {% endif %}
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1"
+  aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"
+          id="deleteModalLabel">Delete event?</h5>
+        <button type="button" class="btn-close"
+          data-dismiss="modal" aria-label="Close">X</button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your event?
+        This action cannot be undone.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"
+          data-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="{% url 'delete_event' event.slug %}" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extras %}
+<script src="{% static 'js/event.js' %}"></script>
 {% endblock %}
