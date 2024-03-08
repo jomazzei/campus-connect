@@ -88,9 +88,9 @@ This project is currently undergoing the following validations and performance t
   - [CI Python Linter](https://pep8ci.herokuapp.com/)
 
 ### Performance & Contrast Tests
--__Performance__
+- __Performance__
   - [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview)
--__Contrast__
+- __Contrast__
   - [WCAG](https://chromewebstore.google.com/detail/plnahcmalebffmaghcpcmpaciebdhgdf)
 
 ### Debugging & Test Module
