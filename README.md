@@ -51,8 +51,11 @@ Connect with more people, grow your social circle or your network and set yourse
 
 <br>
 
+<br>
 
-## Core User Stories & Features
+## User Stories & Features
+
+### Core Focus
 Our core stories and features revolve around what the main purpose of the website is.   
 These include:
 <ul>
