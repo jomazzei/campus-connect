@@ -17,7 +17,6 @@ Connect with more people, grow your social circle or your network and set yourse
 * [Wireframes](#wireframes)
 * [Core User Stories & Features](#core-user-stories-&-features)
 * [Testing](#testing)
-* [Deployment](#deployment)
 * [Credits](#credits)
 
 <br>  
