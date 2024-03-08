@@ -94,10 +94,8 @@ This project is currently undergoing the following validations and performance t
   - [WCAG](https://chromewebstore.google.com/detail/plnahcmalebffmaghcpcmpaciebdhgdf)
 
 ### Debugging & Test Module
--__User Event Form__
-  - placeholder
-  - screenshot of name= tag
-  - full known bug list on project board
+-__Some of the key bugs will be listed here and how they were dealt with__
+  - Currently the full view of our tracked bugs can be found on our [project board](https://github.com/users/jomazzei/projects/3/views/1)
 
 <br>
 
