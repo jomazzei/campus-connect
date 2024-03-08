@@ -28,18 +28,7 @@
                     </div>
                     <!-- This just grabs the associated URL for that post, defined in the "slug" portion of the admin panel -->
                     <a href="{% url 'event_detail' event.slug %}">
-
                         <h2>{{ event.title }}</h2>
-
-                        <!-- I would probably remove the content section and instead
-                go for a sleek design showing the title, event date and time.
-                You can absolutely go for the content as well but it'll require some extra 
-                hassle with JS to create a cut-off point when there's too much text.
-                Depends how you're feeling about it -->
-                        <p>
-                            {{ event.content }}
-                        </p>
-
                     </a>
 
                     <hr>
