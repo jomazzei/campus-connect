@@ -84,7 +84,42 @@ Our core stories and features revolved around what the main purpose of the websi
 
 ### Images
 ![CampusConnect logo](/DocumentationAssets/campus_logo.png)
-- Campus Connect logo sourced from copyright holder [ICICI Bank](https://www.icicicareers.com/campusconnect/Home.aspx)
+- Logo sourced from copyright holder [ICICI Bank](https://www.icicicareers.com/campusconnect/Home.aspx)
+
+<br>
+
+![About Page picture](/DocumentationAssets/about_page_background.jpg)
+- About page image sourced from copyright holder [Royal Roads University](https://www.royalroads.ca/events/campus-connect-september-22)
+
+<br>
+
+![Carousel1]()
+- Carousel image sourced from copyright holder [Humanitix](https://events.humanitix.com/campus-connect)
+
+<br>
+
+![Carousel2]()
+- Carousel image sourced from this [video](https://www.youtube.com/watch?v=ZDKuhTLwbj0). Copyright holder [NTT Global Data Centers](https://services.global.ntt/en-us/)
+
+<br>
+
+![Carousel3]()
+- Carousel image sourced from copyright holder [Royal Roads University](https://www.royalroads.ca/events/campus-connect-2021-september-15)
+
+<br>
+
+![Placeholder event1]()
+- Placeholder event image sourced from copyright holder [University of Montevallo](https://www.montevallo.edu/alumni/alumni-events/career-panel/)
+
+<br>
+
+![Placeholder event2](/DocumentationAssets/)
+- Placeholder event image sourced from copyright holder [Wolves Weekly](https://wolvesweekly.wordpress.com/2017/12/14/service-hours-ideas/)
+
+<br>
+
+![Placeholder event3](/DocumentationAssets/social-mixer-777x437.jpg)
+- Placeholder event image sourced from copyright holder [University of Oxford](https://www.ox.ac.uk/news/arts-blog/power-prediction-language-comprehension)
 
 
 ### Content
