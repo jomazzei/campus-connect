@@ -23,8 +23,13 @@
             </p>
             <hr/>
             {% if user.is_authenticated %}
-            <a class="btn" href="{% url 'attend_event' event.slug %}">
-                I am attending               
+            <a class="btn btn-primary" href="{% url 'attend_event' event.slug %}">
+                I am attending this event
+            </a>
+            {% endif %}
+            {% if user == event.organizer %}
+            <a class="btn btn-outline-danger" href="{% url 'delete_event' event.slug %}">
+                Delete this event.
             </a>
             {% endif %}
         </div>
