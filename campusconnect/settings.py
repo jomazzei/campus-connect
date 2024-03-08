@@ -39,8 +39,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # when pushed to GitHub it will set itself to False
 DEBUG = 'DEBUG' in os.environ
 
-ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['*']
+ALLOWED_HOSTS = ['.gitpod.io', '.herokuapp.com',]
+CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io', 'https://*.herokuapp.com',]
 
 
 # Application definition
