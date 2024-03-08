@@ -33,7 +33,9 @@ Connect with more people, grow your social circle or your network and set yourse
 - __Development__
   - For our front-end we used the standard HTML5 and CSS3 alongside the bootstrap framework
   - We worked with Python framework Django on the back-end to automatically iterate new pages based on user form submissions
-  - Naturally we used GitHub for our version control, using forks for the team's independent development and a deployment branch that doubles as the latest stable working version    
+  - Naturally we used GitHub for our version control, using forks for the team's independent development and a deployment branch that doubles as the latest stable working version
+  - We are using the free tier of Elephant SQL, while it remains available, to host our database
+  - Our stable website is deployed and hosted on Heroku
 
 <br>
 
@@ -64,8 +66,9 @@ These include:
 The main features left to implement are currently:
 - Event post editing / deleting
 - Admin approval
+- Uploaded image used as a banner
 - Notifications about attending events
-- Device responsivity
+- Full device responsivity
 
 For a full overview of our user stories and features, look at our [project board](https://github.com/users/jomazzei/projects/3/views/1).
 
@@ -79,14 +82,6 @@ For a full overview of our user stories and features, look at our [project board
     - [The W3C Markup Validator](https://validator.w3.org/#validate_by_input)
 - __CSS__
     - [The W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-
-<br>
-
-
-## Deployment
-
-### How this site was deployed
-- 
 
 <br>
 
