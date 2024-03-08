@@ -10,75 +10,79 @@ Connect with more people, grow your social circle or your network and set yourse
 
 <br>
 
+
 #### Skip to content section:
 
 * [Project Methodology & Tech Stack](#project-methodology-&-tech-stack)
 * [Wireframes](#wireframes)
-* [User Stories & Features](#user-stories)
+* [Core User Stories & Features](#core-user-stories-&-features)
 * [Testing](#testing)
 * [Deployment](#deployment)
 * [Credits](#credits)
 
-
 <br>  
+
 
 ## Project Methodology & Tech Stack
 
 - __Ideation & Project Management__
   - We used Balsamiq for our wireframes and ERDplus to sketch out the database tables.
   - Held our stand up meetings on Slack
- 
+  - GitHub Projects was used for our user stories and feature list, allowing for day to day priotization
+
 - __Development__
   - For our front-end we used the standard HTML5 and CSS3 alongside the bootstrap framework
   - We worked with Python framework Django on the back-end to automatically iterate new pages based on user form submissions
   - Naturally we used GitHub for our version control, using forks for the team's independent development and a deployment branch that doubles as the latest stable working version    
 
-
 <br>
 
-## Wireframes(#wireframes)
+
+## Wireframes
 
 ### Home Page
-![index](/DocumentationAssets/)
-
+![home](/DocumentationAssets/HomeStickyHeader.png)
 
 <br>
 
-## User Stories
+### Event List Page
+![eventlist](/DocumentationAssets/EventList.png)
 
-## Features
-- __Placeholder__
-  - Placeholder
+<br>
+
+
+## Core User Stories & Features
+Our core stories and features revolved around what the main purpose of the website is
 
 ### Features Left to Implement
 - __Placeholder__
   - Placeholder
 
-
 <br>
+
 
 ## Testing 
 
 ### Validator Testing
 - __HTML__
-    - Our HTML has been fully validated by [The W3C Markup Validator](https://validator.w3.org/#validate_by_input) and there were no errors found.
+    - [The W3C Markup Validator](https://validator.w3.org/#validate_by_input)
 - __CSS__
-    - Our CSS has been fully validated by [The W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and no errors were found.
-
+    - [The W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 
 <br>
+
 
 ## Deployment
 
 ### How this site was deployed
 - 
 
-
 <br>
+
 
 ## Credits
 - ![CampusConnect logo](/DocumentationAssets/campus_logo.png) sourced from copyright holder [ICICI Bank](https://www.icicicareers.com/campusconnect/Home.aspx)
-- 
+- Template for ReadMe created from the [Belgian Bakes](https://github.com/Tariq-845/belgian-bakes) ReadMe file, originally made by [Tariq](https://github.com/Tariq-845)
 
 ### Content
 - 
