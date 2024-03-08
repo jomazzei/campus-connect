@@ -93,22 +93,22 @@ Our core stories and features revolved around what the main purpose of the websi
 
 <br>
 
-![Carousel1]()
+![Carousel1](/DocumentationAssets/img1.jpg)
 - Carousel image sourced from copyright holder [Humanitix](https://events.humanitix.com/campus-connect)
 
 <br>
 
-![Carousel2]()
+![Carousel2](/DocumentationAssets/img2.jpg)
 - Carousel image sourced from this [video](https://www.youtube.com/watch?v=ZDKuhTLwbj0). Copyright holder [NTT Global Data Centers](https://services.global.ntt/en-us/)
 
 <br>
 
-![Carousel3]()
+![Carousel3](/DocumentationAssets/img3.jpg)
 - Carousel image sourced from copyright holder [Royal Roads University](https://www.royalroads.ca/events/campus-connect-2021-september-15)
 
 <br>
 
-![Placeholder event1]()
+![Placeholder event1](/DocumentationAssets/careerpanel.jpg)
 - Placeholder event image sourced from copyright holder [University of Montevallo](https://www.montevallo.edu/alumni/alumni-events/career-panel/)
 
 <br>
@@ -121,6 +121,11 @@ Our core stories and features revolved around what the main purpose of the websi
 ![Placeholder event3](/DocumentationAssets/social-mixer-777x437.jpg)
 - Placeholder event image sourced from copyright holder [University of Oxford](https://www.ox.ac.uk/news/arts-blog/power-prediction-language-comprehension)
 
+#### Disclaimer
+  Image sources are the presumed copyright holders by searching through exact matches and looking at a combination of result dates, if available, and page source dates, if available.
+  Images originally found on Google Images
+
+<br>
 
 ### Content
 - Template for ReadMe created from the [Belgian Bakes](https://github.com/Tariq-845/belgian-bakes) ReadMe file, originally made by [Tariq](https://github.com/Tariq-845)
