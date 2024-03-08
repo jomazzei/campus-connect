@@ -13,9 +13,9 @@ Connect with more people, grow your social circle or your network and set yourse
 
 #### Skip to content section:
 
-* [Project Methodology & Tech Stack](#project-methodology-and-tech-stack)
+* [Project Methodology and Tech Stack](#project-methodology-and-tech-stack)
 * [Wireframes](#wireframes)
-* [User Stories & Features](#user-stories-and-features)
+* [User Stories and Features](#user-stories-and-features)
 * [Testing](#testing)
 * [Credits](#credits)
 
@@ -53,7 +53,7 @@ Connect with more people, grow your social circle or your network and set yourse
 
 <br>
 
-## User Stories & Features
+## User Stories and Features
 
 ### Core Focus
 Our core stories and features revolve around what the main purpose of the website is.   
