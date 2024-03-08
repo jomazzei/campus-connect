@@ -1,0 +1,8 @@
+<h1>{{ event.title}}</h1>
+<!-- Display event information -->
+{% for review in reviews %}
+  <!-- Display each event review -->
+  <p>{{ review.user.username }} - Rating: {{ review.rating }} - {{ review.comment }}</p>
+{% endfor %}
+
+

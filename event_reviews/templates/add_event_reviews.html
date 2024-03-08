@@ -1,0 +1,7 @@
+<h1>Add Event Review</h1>
+<form method="post" action="{% url 'add_event_review' event_id %}">
+  {% csrf_token %}
+  Rating: <input type="number" name="rating" min="1" max="5" required><br>
+  Comment: <textarea name="comment" required></textarea><br>
+  <input type="submit" value="Submit Event Review">
+</form>
