@@ -6,10 +6,13 @@ Campus Connect is a project being built with the goal to connect students with e
 Be it workshops, study groups, performances or businesses wanting to inspire our young adults, you can schedule your event with us and put the word out.
 Connect with more people, grow your social circle or your network and set yourself up for success.
 
-![MockUp]()
+<hr>
 
-## ToC
-* [Tech Stack](#tech-stack)
+<br>
+
+#### Skip to content section:
+
+* [Project Methodology & Tech Stack](#project-methodology-&-tech-stack)
 * [Wireframes](#wireframes)
 * [User Stories & Features](#user-stories)
 * [Testing](#testing)
@@ -19,18 +22,24 @@ Connect with more people, grow your social circle or your network and set yourse
 
 <br>  
 
-## Tech Stack
+## Project Methodology & Tech Stack
 
 - __Ideation & Project Management__
-  - Placeholder
+  - We used Balsamiq for our wireframes and ERDplus to sketch out the database tables.
+  - Held our stand up meetings on Slack
+ 
+- __Development__
+  - For our front-end we used the standard HTML5 and CSS3 alongside the bootstrap framework
+  - We worked with Python framework Django on the back-end to automatically iterate new pages based on user form submissions
+  - Naturally we used GitHub for our version control, using forks for the team's independent development and a deployment branch that doubles as the latest stable working version    
 
 
 <br>
 
 ## Wireframes(#wireframes)
 
-### Index Page
-![index]()
+### Home Page
+![index](/DocumentationAssets/)
 
 
 <br>
