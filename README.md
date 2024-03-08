@@ -113,7 +113,7 @@ Our core stories and features revolved around what the main purpose of the websi
 
 <br>
 
-![Placeholder event2](/DocumentationAssets/)
+![Placeholder event2](/DocumentationAssets/community3)
 - Placeholder event image sourced from copyright holder [Wolves Weekly](https://wolvesweekly.wordpress.com/2017/12/14/service-hours-ideas/)
 
 <br>
