@@ -151,7 +151,8 @@ This project is currently undergoing the following validations and performance t
 
 ### Content and Code
 - Template for ReadMe created from the [Belgian Bakes](https://github.com/Tariq-845/belgian-bakes) ReadMe file, originally made by [Tariq](https://github.com/Tariq-845)
-- Baseline HTML, Bootstrap and Django code for event list, account registration and baseline views taken from this [Django blog walkthrough project](https://github.com/jomazzei/django-blog)
+- Baseline HTML template for event list and account registration taken from one of our [Django blog walkthrough project](https://github.com/jomazzei/django-blog)
+- Baseline code for views.py and forms.py such as EventList and CreateEventForm taken and adapted from one of our [Django blog walkthrough project](https://github.com/jomazzei/django-blog)
 - Solution for automatic slug generation based on user forms - ChatGPT
 - Referred to various sources for fixes and implementations for features we weren't knowledgeable on:
   - Searched on Stackoverflow
