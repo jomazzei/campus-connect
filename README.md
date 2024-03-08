@@ -13,9 +13,9 @@ Connect with more people, grow your social circle or your network and set yourse
 
 #### Skip to content section:
 
-* [Project Methodology & Tech Stack](#project-methodology-tech-stack)
+* [Project Methodology & Tech Stack](#project-methodology-and-tech-stack)
 * [Wireframes](#wireframes)
-* [User Stories & Features](#user-stories-features)
+* [User Stories & Features](#user-stories-and-features)
 * [Testing](#testing)
 * [Credits](#credits)
 
