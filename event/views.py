@@ -91,4 +91,4 @@ def delete_event(request, slug):
     event = Event.objects.get(slug=slug)
     if request.user == event.organizer:
         event.delete()
-    return HttpResponseRedirect('event_list')
+    return HttpResponseRedirect(reverse('event-list'))
