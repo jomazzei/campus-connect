@@ -26,113 +26,12 @@
             </div>
         </div>
 
+        <!-- This sets a new row if content count can be divided by 3 -->
+        {% if forloop.counter|divisibleby:3 %}
+    </div>
+    <div class="row">
+        {% endif %}
         {% endfor %}
-
-        <!-- Add more events here -->
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div>
-                        <p class="author">Organizer: New Event Organizer 1</p>
-                    </div>
-                    <a href="#">
-                        <h2>New Event Title 1</h2>
-                    </a>
-                    <hr>
-                    <p>Date of Event: New Event Date 1</p>
-                    <p>Time of Event: New Event Time 1</p>
-                    <hr>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div>
-                        <p class="author">Organizer: New Event Organizer 2</p>
-                    </div>
-                    <a href="#">
-                        <h2>New Event Title 2</h2>
-                    </a>
-                    <hr>
-                    <p>Date of Event: New Event Date 2</p>
-                    <p>Time of Event: New Event Time 2</p>
-                    <hr>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div>
-                        <p class="author">Organizer: New Event Organizer 3</p>
-                    </div>
-                    <a href="#">
-                        <h2>New Event Title 3</h2>
-                    </a>
-                    <hr>
-                    <p>Date of Event: New Event Date 3</p>
-                    <p>Time of Event: New Event Time 3</p>
-                    <hr>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div>
-                        <p class="author">Organizer: New Event Organizer 4</p>
-                    </div>
-                    <a href="#">
-                        <h2>New Event Title 4</h2>
-                    </a>
-                    <hr>
-                    <p>Date of Event: New Event Date 4</p>
-                    <p>Time of Event: New Event Time 4</p>
-                    <hr>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div>
-                        <p class="author">Organizer: New Event Organizer 5</p>
-                    </div>
-                    <a href="#">
-                        <h2>New Event Title 5</h2>
-                    </a>
-                    <hr>
-                    <p>Date of Event: New Event Date 5</p>
-                    <p>Time of Event: New Event Time 5</p>
-                    <hr>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div>
-                        <p class="author">Organizer: New Event Organizer 6</p>
-                    </div>
-                    <a href="#">
-                        <h2>New Event Title 6</h2>
-                    </a>
-                    <hr>
-                    <p>Date of Event: New Event Date 6</p>
-                    <p>Time of Event: New Event Time 6</p>
-                    <hr>
-                </div>
-            </div>
-        </div>
-
-        <!-- Repeat the above block for each additional event -->
-
     </div> <!-- end of row div -->
 
     <!-- Pagination -->
