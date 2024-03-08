@@ -78,20 +78,20 @@ For a full overview of our user stories and features, look at our [project board
 
 
 ## Testing 
-
+This project is currently undergoing the following validations and performance tests, and are updated according to progress
 ### Validation
 - __HTML__
   - [The W3C Markup Validator](https://validator.w3.org/#validate_by_input)
 - __CSS__
   - [The W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
--__Python Linter__
-  -[get name](get link)
+- __Python Linter__
+  - [CI Python Linter](https://pep8ci.herokuapp.com/)
 
 ### Performance & Contrast Tests
--__Lighthouse__
-  - placeholder
--__WCAG Color contrast__
-  - placeholder
+-__Performance__
+  - [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview)
+-__Contrast__
+  - [WCAG](https://chromewebstore.google.com/detail/plnahcmalebffmaghcpcmpaciebdhgdf)
 
 ### Debugging & Test Module
 -__User Event Form__
