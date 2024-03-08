@@ -22,7 +22,7 @@ Connect with more people, grow your social circle or your network and set yourse
 <br>  
 
 
-## Project Methodology & Tech Stack
+## Project Methodology and Tech Stack
 
 - __Ideation & Project Management__
   - We used Balsamiq for our wireframes and ERDplus to sketch out the database tables.
