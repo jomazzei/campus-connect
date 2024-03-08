@@ -15,7 +15,7 @@ Connect with more people, grow your social circle or your network and set yourse
 
 * [Project Methodology & Tech Stack](#project-methodology-&-tech-stack)
 * [Wireframes](#wireframes)
-* [Core User Stories & Features](#core-user-stories-&-features)
+* [User Stories & Features](#user-stories-&-features)
 * [Testing](#testing)
 * [Credits](#credits)
 
