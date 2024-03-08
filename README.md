@@ -76,11 +76,13 @@ For a full overview of our user stories and features, look at our [project board
 
 ## Testing 
 
-### Validator Testing
+### Validation
 - __HTML__
   - [The W3C Markup Validator](https://validator.w3.org/#validate_by_input)
 - __CSS__
   - [The W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+-__Python Linter__
+  -[get name](get link)
 
 ### Performance & Contrast Tests
 -__Lighthouse__
