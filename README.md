@@ -2,8 +2,8 @@
 
 [View live deployment here!](https://django-campus-connect-651e95e66b0e.herokuapp.com/)
 
-Campus Connect is a project being built with the goal to connect students with eachother through events.
-Be it workshops, study groups, performances or businesses wanting to inspire our young adults, you can schedule your event with us and put the word out.
+Campus Connect is a project being built with the goal to connect students with eachother through events.   
+Be it workshops, study groups, performances or businesses wanting to inspire our young adults, you can schedule your event with us and put the word out.    
 Connect with more people, grow your social circle or your network and set yourself up for success.
 
 <hr>
@@ -52,11 +52,22 @@ Connect with more people, grow your social circle or your network and set yourse
 
 
 ## Core User Stories & Features
-Our core stories and features revolved around what the main purpose of the website is
+Our core stories and features revolve around what the main purpose of the website is.   
+These include:
+<ul>
+<li>Creation of event posts to advertise networking opportunities</li>
+<li>Being able to view the entire list of currently active events.</li>
+<li>Allowing a level of time organization for users, being able to confirm attendance and in future manage their attendance in their profile.</li>
+</ul>
 
 ### Features Left to Implement
-- __Placeholder__
-  - Placeholder
+The main features left to implement are currently:
+- Event post editing / deleting
+- Admin approval
+- Notifications about attending events
+- Device responsivity
+
+For a full overview of our user stories and features, look at our [project board](https://github.com/users/jomazzei/projects/3/views/1).
 
 <br>
 
@@ -113,7 +124,7 @@ Our core stories and features revolved around what the main purpose of the websi
 
 <br>
 
-![Placeholder event2](/DocumentationAssets/community3)
+![Placeholder event2](/DocumentationAssets/community3.jpg)
 - Placeholder event image sourced from copyright holder [Wolves Weekly](https://wolvesweekly.wordpress.com/2017/12/14/service-hours-ideas/)
 
 <br>
@@ -122,8 +133,8 @@ Our core stories and features revolved around what the main purpose of the websi
 - Placeholder event image sourced from copyright holder [University of Oxford](https://www.ox.ac.uk/news/arts-blog/power-prediction-language-comprehension)
 
 #### Disclaimer
-  Image sources are the presumed copyright holders by searching through exact matches and looking at a combination of result dates, if available, and page source dates, if available.
-  Images originally found on Google Images
+  <p>Image sources are the presumed copyright holders by searching through exact matches and looking at a combination of result dates, if available, and page source dates, if available.</p>
+  <p></p>Images originally found on Google Images</p>
 
 <br>
 
