@@ -80,9 +80,7 @@ Our core stories and features revolved around what the main purpose of the websi
 <br>
 
 
-## Credits
-
-<hr>
+# Credits
 
 ### Images
 ![CampusConnect logo](/DocumentationAssets/campus_logo.png)
@@ -91,6 +89,8 @@ Our core stories and features revolved around what the main purpose of the websi
 
 ### Content
 - Template for ReadMe created from the [Belgian Bakes](https://github.com/Tariq-845/belgian-bakes) ReadMe file, originally made by [Tariq](https://github.com/Tariq-845)
+
+<br>
 
 ### Collaborators 
 - [Daniel Favell](https://github.com/DanielFavell)
